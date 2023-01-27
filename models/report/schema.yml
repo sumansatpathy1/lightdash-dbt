@@ -1,0 +1,30 @@
+
+version: 2
+
+models:
+  - name: report_view
+    description: "A starter dbt model"
+    columns:
+      - name: DomainName
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: SubDomainName
+      - name: DatasetName
+      - name: ColumnName
+      - name: MetricName
+        meta:
+          metrics: 
+            total_metrics:
+              type: count
+
+      - name: MetricUOM
+      - name: MetricValue
+      - name: Insert_Timestamp
+      - name: Alert_Type
+      - name: Alert_Message
+      - name: ComplianceCondition
+      - name: BatchId
+
+
